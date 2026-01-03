@@ -42,8 +42,12 @@ python -m chaintrace.main analyze --address 1HQ3Go3ggs8pFnXuHVHRytPCq5fGG8Hbhx -
 ```
 
 **3. View Results**
-Open the generated HTML file in your browser:
-- `data/outputs/report_[address].html`
+> [!IMPORTANT]
+> The visualization is generated **locally** on your machine.
+> Navigate to the `data/outputs/` directory and double-click the HTML file to open it in your browser.
+
+- `data/outputs/report_[address].html` (Interactive Graph)
+- `data/outputs/edges_[address].csv` (Gephi/Excel export)
 
 ## Practitioner Use Cases
 

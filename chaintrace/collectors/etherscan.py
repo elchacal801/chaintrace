@@ -1,7 +1,7 @@
 import requests
 import time
 from datetime import datetime
-from typing import List
+from typing import List, Dict, Any
 from ..models import Transaction
 from .base import BaseCollector
 
@@ -36,7 +36,7 @@ class EtherscanCollector(BaseCollector):
         else:
             # 2. Fetch from API
             self._rate_limit()
-            params = {
+            params: Dict[str, Any] = {
                 "chainid": "1",  # Ethereum Mainnet
                 "module": "account",
                 "action": "txlist",

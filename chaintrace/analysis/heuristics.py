@@ -5,7 +5,7 @@ def detect_patterns(G: nx.DiGraph) -> Dict[str, List[str]]:
     """
     Identify nodes matching specific structural patterns.
     """
-    patterns = {
+    patterns: Dict[str, List[str]] = {
         "fan_out": [],
         "fan_in": [],
         "bridge/mixer": []

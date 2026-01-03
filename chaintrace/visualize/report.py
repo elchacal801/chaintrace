@@ -1,5 +1,5 @@
 import networkx as nx
-from pyvis.network import Network
+from pyvis.network import Network # type: ignore
 from pathlib import Path
 
 class HTMLReportGenerator:

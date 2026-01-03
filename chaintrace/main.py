@@ -29,7 +29,9 @@ def analyze(
     console.print(f"[bold green]Starting analysis for {address} on {chain} (depth={depth})[/bold green]")
     
     from .collectors.bitcoin import BitcoinCollector
+    from .collectors.base import BaseCollector
 
+    collector: BaseCollector
     if chain.lower() == "bitcoin":
         collector = BitcoinCollector()
     else:

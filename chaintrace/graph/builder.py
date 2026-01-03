@@ -6,7 +6,7 @@ from ..models import Transaction
 class GraphBuilder:
     def __init__(self, transactions: List[Transaction]):
         self.raw_txs = transactions
-        self.G = nx.DiGraph()
+        self.G: nx.DiGraph = nx.DiGraph()
         
     def build(self) -> nx.DiGraph:
         """
