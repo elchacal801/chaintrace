@@ -13,6 +13,12 @@ ChainTrace is a practitioner-focused tool designed to instantly triage cryptocur
     - `report.html`: Interactive, self-contained visualization file.
     - `edges.csv`: Clean edge list for import into Gephi, Maltego, or Neo4j.
 
+## 📊 Live Dashboard
+
+**[👉 View Real-Time Intelligence Dashboard](https://elchacal801.github.io/chaintrace/)**
+
+Automatically tracks high-profile entities (Vitalik Buterin, Mark Cuban, Silk Road Seized Funds) with daily updates via GitHub Actions.
+
 ## Quickstart
 
 ### Installation
@@ -45,6 +51,8 @@ python -m chaintrace.main analyze --address 1HQ3Go3ggs8pFnXuHVHRytPCq5fGG8Hbhx -
 > [!IMPORTANT]
 > The visualization is generated **locally** on your machine.
 > Navigate to the `data/outputs/` directory and double-click the HTML file to open it in your browser.
+
+![ChainTrace Visualization](docs/assets/screenshot.png)
 
 - `data/outputs/report_[address].html` (Interactive Graph)
 - `data/outputs/edges_[address].csv` (Gephi/Excel export)

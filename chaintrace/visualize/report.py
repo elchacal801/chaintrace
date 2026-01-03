@@ -17,8 +17,30 @@ class HTMLReportGenerator:
         # Note: PyVis handles this, but we want to ensure attributes are strings/numbers for JS
         net.from_nx(self.G)
         
-        # Add physics controls
-        net.show_buttons(filter_=['physics'])
+        # Add physics controls (optimized for large graphs)
+        net.set_options("""
+        var options = {
+          "physics": {
+            "barnesHut": {
+              "gravitationalConstant": -30000,
+              "centralGravity": 0.3,
+              "springLength": 95,
+              "springConstant": 0.04,
+              "damping": 0.09,
+              "avoidOverlap": 0.1
+            },
+            "minVelocity": 0.75,
+            "stabilization": {
+                "enabled": true,
+                "iterations": 1000,
+                "updateInterval": 25,
+                "onlyDynamicEdges": false,
+                "fit": true
+            }
+          }
+        }
+        """)
+        # net.show_buttons(filter_=['physics']) # Use custom options instead of default buttons
         
         # Save
         path = Path(output_path)
