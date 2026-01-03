@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+
+# Environments
+.env
+.venv/
+env/
+venv/
+ENV/
+
+# Data
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/outputs/*
+!data/outputs/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+
+# Vendor/Private
+/_private/
+/private/
+/vendor_private/
+/work_only/
+
+# User specifically requested global private folder ignore
+C:\Users\anon\Documents\anon\_private

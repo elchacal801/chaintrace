@@ -1,0 +1,24 @@
+{
+    "target_address": "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045",
+    "analysis_date": "2024-05-21T10:00:00Z",
+    "total_transactions": 1420,
+    "net_volume_eth": 450.5,
+    "top_counterparties": [
+        {
+            "address": "0xExchangeHotWallet...",
+            "label": "Binance 14",
+            "interactions": 150,
+            "volume_sent": 200.0
+        },
+        {
+            "address": "0xMixer...",
+            "label": "Tornado Cash (Suspected)",
+            "interactions": 5,
+            "volume_sent": 10.0
+        }
+    ],
+    "risk_flags": [
+        "High interaction with centralized exchange",
+        "Direct interaction with mixer"
+    ]
+}
