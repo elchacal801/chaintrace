@@ -1,4 +1,5 @@
 import networkx as nx
+import math
 import pandas as pd
 from typing import List, Dict
 from ..models import Transaction
@@ -60,13 +61,21 @@ class GraphBuilder:
         # Add to graph
         for (src, dst), meta in edge_buffer.items():
             human_val = meta["value_wei"] / divider
+            
+            # Log scaling for visual width (1 to 10 pixels range)
+            width = 1
+            if human_val > 0:
+                width = min(1 + math.log(human_val + 1), 10)
+
             self.G.add_edge(
                 src, 
                 dst, 
-                weight=meta["value_wei"],  # For layout algos
+                weight=width,              # Use scaled width for physics to avoid 10^18 force explosion
+                width=width,               # Visual width
                 count=meta["count"],
                 value_human=human_val,
                 first_seen=meta["first_seen"].isoformat(),
+                last_seen=meta["last_seen"].isoformat(),
                 last_seen=meta["last_seen"].isoformat(),
                 label=f"{human_val:.4f} {symbol}",
                 title=f"Transfers: {meta['count']}<br>Vol: {human_val:.4f} {symbol}"
