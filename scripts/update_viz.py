@@ -1,13 +1,11 @@
 import os
 import sys
-import argparse
 from typing import List, Dict
 from chaintrace.collectors.etherscan import EtherscanCollector
 from chaintrace.collectors.bitcoin import BitcoinCollector
 from chaintrace.graph.builder import GraphBuilder
 from chaintrace.analysis.heuristics import tag_nodes
 from chaintrace.visualize.report import HTMLReportGenerator
-from chaintrace.models import Transaction
 
 # Directories
 OUTPUT_DIR = "docs" # GitHub Pages publishes from docs/ or gh-pages branch. docs/ is easier for main branch.

@@ -1,4 +1,3 @@
-import pytest
 from datetime import datetime
 from chaintrace.models import Transaction
 from chaintrace.graph.builder import GraphBuilder

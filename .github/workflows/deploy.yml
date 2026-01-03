@@ -27,6 +27,7 @@ jobs:
       - name: Run Visualization Update
         env:
           ETHERSCAN_API_KEY: ${{ secrets.ETHERSCAN_API_KEY }}
+          PYTHONPATH: .
         run: |
           python scripts/update_viz.py
           
