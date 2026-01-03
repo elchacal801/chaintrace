@@ -76,7 +76,6 @@ class GraphBuilder:
                 value_human=human_val,
                 first_seen=meta["first_seen"].isoformat(),
                 last_seen=meta["last_seen"].isoformat(),
-                last_seen=meta["last_seen"].isoformat(),
                 label=f"{human_val:.4f} {symbol}",
                 title=f"Transfers: {meta['count']}<br>Vol: {human_val:.4f} {symbol}"
             )
