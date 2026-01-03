@@ -11,7 +11,7 @@ class HTMLReportGenerator:
         Generate interactive HTML graph.
         """
         # Configure PyVis
-        net = Network(height="750px", width="100%", bgcolor="#222222", font_color="white", notebook=False)
+        net = Network(height="100vh", width="100%", bgcolor="#222222", font_color="white", notebook=False)
         
         # Convert NetworkX to PyVis
         # Note: PyVis handles this, but we want to ensure attributes are strings/numbers for JS
