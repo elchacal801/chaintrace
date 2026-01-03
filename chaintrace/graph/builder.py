@@ -63,7 +63,7 @@ class GraphBuilder:
             human_val = meta["value_wei"] / divider
             
             # Log scaling for visual width (1 to 10 pixels range)
-            width = 1
+            width: float = 1.0
             if human_val > 0:
                 width = min(1 + math.log(human_val + 1), 10)
 
